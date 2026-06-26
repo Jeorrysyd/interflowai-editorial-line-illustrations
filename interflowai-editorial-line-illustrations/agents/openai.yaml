@@ -1,0 +1,7 @@
+interface:
+  display_name: "《互通有无美式线条正文配图》"
+  short_description: "把中文文章拆成白底美式线条人物配图"
+  default_prompt: "Use $interflowai-editorial-line-illustrations to turn this Chinese article into white-background editorial line illustrations."
+
+policy:
+  allow_implicit_invocation: true
