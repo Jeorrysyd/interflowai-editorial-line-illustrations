@@ -115,11 +115,49 @@ InterflowAI 默认配色：
 
 ## 示例效果
 
-### InterflowAI handoff
+下面这些案例来自实际使用过程，用来说明这个 Skill 可以覆盖的几类文章配图需求。它们偏 InterflowAI 内容工作流语境，但不是使用边界；你可以替换为自己的文章主题、行业和品牌色。
+
+### 活动复盘 / 连接与交付
 
 ![InterflowAI handoff](examples/images/01-interflow-handoff.png)
 
-这张图用于示范默认 InterflowAI 视觉 preset：白底、美式线条人物、品牌色块、问题 / 案例 / 匹配 / 下一次的内容资产隐喻。
+用“递卡片、收文件夹、留下下一次入口”的人物动作，表达活动之后留下问题、案例、匹配和后续连接。
+
+### 社群不是群聊
+
+![Not group chat](examples/images/02-not-group-chat.png)
+
+适合活动复盘、社群介绍、组织说明类文章：不是画一群人热闹聊天，而是把案例、资源、诊断和试点连接成一张关系网。
+
+### 两个 Skill 长出来
+
+![Two skills grow](examples/images/03-two-skills-grow.png)
+
+适合公开构建、工具发布、方法沉淀类文章：把“业务现场里长出工具”画成一个带根系的内容系统。
+
+### AI 放大判断
+
+![AI judgement](examples/images/04-ai-judgement.png)
+
+适合观点文和方法论文章：用人物、素材堆和机器的关系，说明 AI 不是替代判断，而是放大判断。
+
+### 折腾不是换方向
+
+![Not changing direction](examples/images/05-not-changing-direction.png)
+
+适合创业复盘、产品迭代、内容战略文章：把“不断调整，但主线不变”画成一根穿过设计、内容、AI 和品牌的线。
+
+### 口播到成片
+
+![Video workflow](examples/images/06-video-workflow.png)
+
+适合工作流说明和课程笔记：用一个夸张人物把口播素材塞进剪辑机器，再吐出可发布成片。
+
+### 内容系统穿线
+
+![Content system threading](examples/images/07-content-system-threading.png)
+
+适合产品笔记、内容资产库、工作流文章：用一根线把素材、内容、模型和连接对象串起来。
 
 更多可复制 prompt 见 [examples/prompts.md](examples/prompts.md)。
 
