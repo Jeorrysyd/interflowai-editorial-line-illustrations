@@ -1,6 +1,6 @@
 ---
 name: interflowai-editorial-line-illustrations
-description: Generate Chinese article illustrations in a white-background American editorial line-art style. Use when users ask for WeChat/Xiaohongshu/article spot illustrations, essay visuals, event recap illustrations, product note visuals, methodology diagrams, image shot lists, prompt writing, "小黑配图二创", "互通有无配色", InterflowAI branded visuals, or image QA that should preserve Xiaohei-style conceptual explanation while replacing the mascot with simple human line figures, sparse text, brand color blocks, corner bylines, and abstract geometric identity elements.
+description: Generate Chinese article body spot illustrations in a white-background American editorial line-art style. Use when users ask for WeChat/Xiaohongshu/article spot illustrations, essay visuals, event recap illustrations, product note visuals, course-note visuals, image shot lists, prompt writing, "小黑配图二创", "互通有无配色", InterflowAI branded visuals, or image QA that should preserve Xiaohei-style conceptual explanation while replacing the mascot with simple human line figures, sparse text, brand color blocks, corner bylines, and abstract geometric identity elements. Default mode is clean body illustration with no large title; cover/title and complex workflow modes require explicit user request.
 ---
 
 # InterflowAI Editorial Line Illustrations
@@ -10,6 +10,8 @@ description: Generate Chinese article illustrations in a white-background Americ
 Create article illustrations that explain Chinese writing through simple human figures, object metaphors, color blocks, and sparse annotations.
 
 This is a general article-illustration skill. It can be used for WeChat articles, Xiaohongshu notes, event recaps, product opinions, course notes, methodology writing, workflow documents, and founder essays. It is not limited to AI topics or InterflowAI projects.
+
+Default mode is a clean body spot illustration: no large title, 1 main figure by default, 3-5 core objects, 0-4 short labels, and at least 45% white space. Cover/title images, text-heavy explainers, grids, and complex workflow diagrams are opt-in only.
 
 The default visual preset uses InterflowAI / 互通有无 colors and a small optional byline, but users may replace the palette, signature, and theme with their own brand.
 
@@ -61,6 +63,8 @@ Each image should explain one idea through one human-object relationship:
 - object metaphors such as forms, cards, folders, clocks, phones, boxes, doors, cables, tiny machines, stamps, envelopes, calendar pages, and messy note piles
 - sparse labels only when labels make the article easier to understand
 
+For normal body illustrations, do not add a title, headline, banner, or slogan. Use at most four short labels. Use two figures only when the idea is exchange, handoff, matching, dialogue, or comparison.
+
 ### 4. Save And Handoff
 
 When working in a local workspace, save final images under:
@@ -87,6 +91,7 @@ After generation, inspect every image against `references/qa-checklist.md`. Rege
 - there are too many characters for the intended single-person scene
 - it looks like a PPT infographic, corporate vector illustration, or cute mascot poster
 - the text is wrong, too long, or used as a headline in a正文 image
+- the image looks like a cover poster or complex workflow mega-diagram when the user requested body illustration
 - it copies the supplied reference image's exact layout, marks, brand, or composition
 
 ## Output Style

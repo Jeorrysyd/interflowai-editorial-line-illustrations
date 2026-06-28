@@ -115,51 +115,41 @@ InterflowAI 默认配色：
 
 ## 示例效果
 
-下面这些案例来自实际使用过程，用来说明这个 Skill 可以覆盖的几类文章配图需求。它们偏 InterflowAI 内容工作流语境，但不是使用边界；你可以替换为自己的文章主题、行业和品牌色。
+下面这些案例来自实际使用过程，用来说明这个 Skill 的默认边界。
 
-### 活动复盘 / 连接与交付
+默认范式优先：**白底、干净线条、人物简洁、动作清楚、色块克制、有留白、无大标题**。
+
+它默认不是封面图，不是标题海报，也不是复杂信息图。只有当你明确要求“封面 / 标题图 / 图上文字版 / 工作流图”时，才会进入扩展模式。
+
+### 1. 正文插画 / Body Spot Illustration
+
+默认效果。适合公众号、小红书长文、活动复盘、产品观点、课程笔记等正文段落配图。
 
 ![InterflowAI handoff](examples/images/01-interflow-handoff.png)
 
 用“递卡片、收文件夹、留下下一次入口”的人物动作，表达活动之后留下问题、案例、匹配和后续连接。
 
-### 社群不是群聊
+![Useful thread](examples/images/02-useful-thread.png)
 
-![Not group chat](examples/images/02-not-group-chat.png)
+用“从小线团里抽出一根线并接到电脑上”的动作，表达方法论文章里常见的筛选、连接和减少重复试错。
 
-适合活动复盘、社群介绍、组织说明类文章：不是画一群人热闹聊天，而是把案例、资源、诊断和试点连接成一张关系网。
+### 2. 连接与匹配 / Handoff & Matching
 
-### 两个 Skill 长出来
+适合活动复盘、社群、资源匹配、问题收集、下一场活动预热。
 
-![Two skills grow](examples/images/03-two-skills-grow.png)
+![Handoff and matching](examples/images/03-handoff-matching.png)
 
-适合公开构建、工具发布、方法沉淀类文章：把“业务现场里长出工具”画成一个带根系的内容系统。
+重点不是画一群人热闹聊天，而是把“先问清楚、再匹配、留下案例和跟进入口”画成一个人的动作。
 
-### AI 放大判断
+### 3. 内容工作流 / Workflow, Opt-In
 
-![AI judgement](examples/images/04-ai-judgement.png)
+只有当你明确要求“工作流图 / 流程说明 / 课程步骤图”时使用。复杂度也要克制，不把它做成大而全系统图。
 
-适合观点文和方法论文章：用人物、素材堆和机器的关系，说明 AI 不是替代判断，而是放大判断。
+![Workflow opt-in](examples/images/04-workflow-opt-in.png)
 
-### 折腾不是换方向
+适合低复杂度工作流说明：用一个夸张人物和一台机器，表达“输入素材、整理加工、输出成品”。
 
-![Not changing direction](examples/images/05-not-changing-direction.png)
-
-适合创业复盘、产品迭代、内容战略文章：把“不断调整，但主线不变”画成一根穿过设计、内容、AI 和品牌的线。
-
-### 口播到成片
-
-![Video workflow](examples/images/06-video-workflow.png)
-
-适合工作流说明和课程笔记：用一个夸张人物把口播素材塞进剪辑机器，再吐出可发布成片。
-
-### 内容系统穿线
-
-![Content system threading](examples/images/07-content-system-threading.png)
-
-适合产品笔记、内容资产库、工作流文章：用一根线把素材、内容、模型和连接对象串起来。
-
-更多可复制 prompt 见 [examples/prompts.md](examples/prompts.md)。
+更多可复制 prompt 见 [examples/prompts.md](examples/prompts.md)，固定回归测试 prompt 见 [examples/regression-prompts.md](examples/regression-prompts.md)。
 
 ---
 
@@ -260,8 +250,12 @@ Use $interflowai-editorial-line-illustrations
 ├── NOTICE.md
 ├── examples/
 │   ├── prompts.md
+│   ├── regression-prompts.md
 │   ├── images/
-│   │   └── 01-interflow-handoff.png
+│   │   ├── 01-interflow-handoff.png
+│   │   ├── 02-useful-thread.png
+│   │   ├── 03-handoff-matching.png
+│   │   └── 04-workflow-opt-in.png
 │   └── outputs/
 │       └── generic-shot-list.md
 └── interflowai-editorial-line-illustrations/
@@ -293,6 +287,7 @@ interflowai-editorial-line-illustrations/
 - `quick_validate.py` 基础校验。
 - 本地 Codex 生成测试。
 - InterflowAI 默认品牌 preset 样图测试。
+- 2026-06-28 固定 regression prompts 抽测：5 组 prompt，每组 2 张。首轮结果为 10/10 无大标题，8/10 接近 canonical body illustration；2 张“从混乱里抽线”图因为纸条和标签偏多未进入公开案例。随后收紧“混乱信息必须压缩成小线团/小纸堆”的规则，并重跑该题，2/2 通过。
 
 它不依赖特定平台。只要模型能读取 `SKILL.md` 和 `references/`，就可以复刻“先找认知锚点，再生成正文配图”的流程。
 
